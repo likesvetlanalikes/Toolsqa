@@ -1,14 +1,18 @@
 package tests;
 
+import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
-public class FormTest extends tests.base.BaseTest {
-
+public class FormTest extends BaseTest{
     @Test
-    public void formTest(){
+    public void fromPage(){
         formPage.open();
 
-        assertTrue(FormPage.isPageOpen());
+        assertTrue(formPage.isPageOpen());
+
+        formPage.create();
+        formPage.clickInput();
+        System.out.println("gghfhfh");
 
     }
 }
